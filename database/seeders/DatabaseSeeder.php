@@ -18,5 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);//Llamado al seeder de usuarios
         $this->call(modalidades::class);//Llamado al seeder de modalidades
         $this->call(carrerasSeeder::class);//Llamado al seeder de carreras
+        $this->call(planestudiosSeeder::class);//Llamado al seeder de plan de estudios
+        $this->call(escalaevalSeeder::class);//Llamado al seeder de escalaeval
     }
 }

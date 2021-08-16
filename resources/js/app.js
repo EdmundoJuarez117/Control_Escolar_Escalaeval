@@ -35,11 +35,16 @@ Vue.component('grid-pagination-component-Carrera', require('./components/GridPag
 
 Vue.component('grid-pagination-component-Planestudio', require('./components/GridPaginationComponentPlanestudio.vue').default);
 
+Vue.component('grid-pagination-component-Escalaeval', require('./components/GridPaginationComponentEscalaeval.vue').default);
+
 Vue.component('modalidad-component', require('./components/ModalidadComponent.vue').default);
 
 Vue.component('carrera-component', require('./components/CarreraComponent.vue').default);
 
 Vue.component('planestudio-component', require('./components/PlanestudioComponent.vue').default);
+
+Vue.component('escalaeval-component', require('./components/EscalaevalComponent.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

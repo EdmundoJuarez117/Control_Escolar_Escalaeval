@@ -24,4 +24,5 @@ Route::group(['middleware'=>['role:administrador|docente|alumno']],function(){
     Route::resource('modalidad', 'App\Http\Controllers\C_modalidadController');
     Route::resource('carrera', 'App\Http\Controllers\C_carreraController');
     Route::resource('planestudio', 'App\Http\Controllers\C_planestudioController');
+    Route::resource('escalaeval', 'App\Http\Controllers\C_escalaevalController');
 });

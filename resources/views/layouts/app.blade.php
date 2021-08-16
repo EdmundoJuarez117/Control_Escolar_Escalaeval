@@ -70,6 +70,11 @@
                             <a href="/planestudio" class="nav-link">Planes de estudio</a>
                             </li>
                             @endcan
+                            @can('admin.escalaeval.index')
+                            <li>
+                            <a href="/escalaeval" class="nav-link">Modalidades de carrera</a>
+                            </li>
+                            @endcan
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

@@ -35,6 +35,10 @@ class RolesAndPermissions extends Seeder
       Permission::create(['name'=>'admin.planestudio.create']);
       Permission::create(['name'=>'admin.planestudio.edit']);
       Permission::create(['name'=>'admin.planestudio.destroy']);
+      Permission::create(['name'=>'admin.escalaeval.index']);
+      Permission::create(['name'=>'admin.escalaeval.create']);
+      Permission::create(['name'=>'admin.escalaeval.edit']);
+      Permission::create(['name'=>'admin.escalaeval.destroy']);
       // Permission::create(['name' => 'delete permission']);
 
       //Creacion de roles junto con los permisos asignados
@@ -44,7 +48,7 @@ class RolesAndPermissions extends Seeder
 
       // or may be done by chaining
       $role = Role::create(['name' => 'docente'])
-          ->givePermissionTo(['admin.home','admin.modalidad.index','admin.carrera.index','admin.planestudio.index']);
+          ->givePermissionTo(['admin.home','admin.modalidad.index','admin.carrera.index','admin.planestudio.index','admin.escalaeval.index']);
 
       $role = Role::create(['name' => 'administrador']);
       $role->givePermissionTo(Permission::all());
