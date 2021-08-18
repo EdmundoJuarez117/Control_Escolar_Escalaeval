@@ -31,12 +31,6 @@ Vue.component('toast-component', require('./components/toastComponent.vue').defa
 
 Vue.component('grid-pagination-component', require('./components/GridPaginationComponent.vue').default);
 
-Vue.component('grid-pagination-component-Carrera', require('./components/GridPaginationComponentCarrera.vue').default);
-
-Vue.component('grid-pagination-component-Planestudio', require('./components/GridPaginationComponentPlanestudio.vue').default);
-
-Vue.component('grid-pagination-component-Escalaeval', require('./components/GridPaginationComponentEscalaeval.vue').default);
-
 Vue.component('modalidad-component', require('./components/ModalidadComponent.vue').default);
 
 Vue.component('carrera-component', require('./components/CarreraComponent.vue').default);

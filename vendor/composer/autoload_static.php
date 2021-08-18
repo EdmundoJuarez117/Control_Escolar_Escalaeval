@@ -36,7 +36,6 @@ class ComposerStaticInit293611818fe747c896d7c9cbfa168a3d
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
-        'ecbd2a3a47a28a45ce95cfc11ff5b244' => __DIR__ . '/../..' . '/app/libraries/GridPagination.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -526,6 +525,7 @@ class ComposerStaticInit293611818fe747c896d7c9cbfa168a3d
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\C_carreraController' => __DIR__ . '/../..' . '/app/Http/Controllers/C_carreraController.php',
+        'App\\Http\\Controllers\\C_escalaevalController' => __DIR__ . '/../..' . '/app/Http/Controllers/C_escalaevalController.php',
         'App\\Http\\Controllers\\C_modalidadController' => __DIR__ . '/../..' . '/app/Http/Controllers/C_modalidadController.php',
         'App\\Http\\Controllers\\C_planestudioController' => __DIR__ . '/../..' . '/app/Http/Controllers/C_planestudioController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -656,6 +656,7 @@ class ComposerStaticInit293611818fe747c896d7c9cbfa168a3d
         'Database\\Seeders\\RolesAndPermissions' => __DIR__ . '/../..' . '/database/seeders/RolesAndPermissions.php',
         'Database\\Seeders\\UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeders/UsersTableSeeder.php',
         'Database\\Seeders\\carrerasSeeder' => __DIR__ . '/../..' . '/database/seeders/carrerasSeeder.php',
+        'Database\\Seeders\\escalaevalSeeder' => __DIR__ . '/../..' . '/database/seeders/escalaevalSeeder.php',
         'Database\\Seeders\\modalidades' => __DIR__ . '/../..' . '/database/seeders/modalidades.php',
         'Database\\Seeders\\planestudiosSeeder' => __DIR__ . '/../..' . '/database/seeders/planestudiosSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

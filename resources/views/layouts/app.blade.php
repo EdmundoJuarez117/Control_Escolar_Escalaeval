@@ -57,22 +57,22 @@
                             </li>
                             @can('admin.modalidad.index')
                             <li>
-                            <a href="/modalidad" class="nav-link">Modalidades</a>
+                            <a href="{{route {'modalidades.index'}}}" class="nav-link">Modalidades</a>
                             </li>
                             @endcan
                             @can('admin.carrera.index')
                             <li>
-                            <a href="/carrera" class="nav-link">Carreras</a>
+                            <a href="{{route {'carrera.index'}}}" class="nav-link">Carreras</a>
                             </li>
                             @endcan
                             @can('admin.planestudio.index')
                             <li>
-                            <a href="/planestudio" class="nav-link">Planes de estudio</a>
+                            <a href="{{route {'planestudio.index'}}}" class="nav-link">Planes de estudio</a>
                             </li>
                             @endcan
                             @can('admin.escalaeval.index')
                             <li>
-                            <a href="/escalaeval" class="nav-link">Modalidades de carrera</a>
+                            <a href="{{route {'escalaeval.index'}}}" class="nav-link">Modalidades de carrera</a>
                             </li>
                             @endcan
                             <li class="nav-item dropdown">

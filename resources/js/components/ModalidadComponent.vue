@@ -5,7 +5,7 @@
 			<div class="col-12 col-sm-12 col-md-10 col-lg-10 mb-2">
 				<div class="form-group ">
 					<label for="">Nombre</label>
-					<input v-model="modalidad.nombre"
+					<input v-model="modalidadSearch.nombre"
 					type="text" class="form-control">
 				</div><!-- .form-group -->
 			</div><!-- .col -->
@@ -27,9 +27,10 @@
 
 		<grid-pagination-component ref="myGrid"  @actionGrid="actionGrid"
 		v-bind:columns="columns_grid"
-		v-bind:total_datos="total"
+		v-bind:total_datos="todaOk"
 		v-bind:datagrid="modalidades"
 		v-bind:endPoint="myendPoint"
+		v-bind:search="modalidadSearch"
 		>
 	</grid-pagination-component>
 
@@ -86,6 +87,10 @@ export default {
 				nombre: "",
 			},
 
+			modalidadSearch: {
+				nombre: ""
+			},
+
 			myendPoint: "modalidades",
 
 			columns_grid: {
@@ -129,6 +134,7 @@ export default {
 					message: ""
 				},
 
+				todaOk: this.total,
 			}
 
 		},
@@ -139,14 +145,8 @@ export default {
 			}
 		},
 
-
-
 		methods: {
 			showForm( data={} ) {
-				console.info("showForm() -> data: ");
-				console.info(data);
-				// this.sucursal.id = ( data.id === undefined )?0:data.id;
-				// alert(typeof data.id);
 				this.modalidad.id = (data.id === undefined)?0:data.id;
 
 				if(this.modalidad.id > 0){
@@ -178,7 +178,6 @@ export default {
 			},
 
 			hideForm() {
-				console.info("hideForm()");
 				this.$v.modalidad.$reset();
 				this.resetFields();
 				this.$refs.toastDialog.close();
@@ -212,6 +211,9 @@ export default {
 					}else{
 						me.configToast.type = "success";
 						me.configToast.message = "Modalidad agregada correctamente";
+
+						me.todaOk ++; // update value with + 1, for re-reder grid pagination
+
 						me.hideForm();
 						me.toList();
 					}
@@ -271,23 +273,23 @@ export default {
 			},
 
 			toList() {
-				this.$refs.myGrid.getPagination(0);
+				// console.info("this.modalidadSearch");
+				// console.info( JSON.stringify(this.modalidadSearch) );
+
+				this.$refs.myGrid.getPagination(0, JSON.stringify(this.modalidadSearch));
 			},
 
 			confirmDelete(responseConfirm) {
 			},
 
-
-
-
 		},
 
 		created() {
-			console.info("created...");
 		},
 
 		mounted(){
 		},
+
 		watch: {
 		},
 
